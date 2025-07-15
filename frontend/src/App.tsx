@@ -40,7 +40,10 @@ function App() {
       payload: { message }
     }));
 
-    messageInputRef.current.value = "";
+    if (messageInputRef.current) {
+  messageInputRef.current.value = "";
+}
+
   };
 
   if (!joinedRoom) {
@@ -51,7 +54,7 @@ function App() {
           ref={roomInputRef}
           type="text"
           placeholder="Enter room name…"
-          className="p-2 rounded text-black placeholder-gray-400 text-white"
+          className="p-2 rounded placeholder-gray-400 text-white"
         />
         <button
           onClick={joinRoom}
