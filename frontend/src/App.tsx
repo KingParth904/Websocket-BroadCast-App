@@ -9,7 +9,7 @@ function App() {
   const wsRef = useRef<WebSocket>();
 
   useEffect(() => {
-    const ws = new WebSocket(import.meta.env.VITE_WS_URL);
+    const ws = new WebSocket(import.meta.env.VITE_WS_URL!);
     wsRef.current = ws;
 
     ws.onmessage = (event) => {
