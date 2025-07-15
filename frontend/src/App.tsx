@@ -6,7 +6,7 @@ function App() {
   const [joinedRoom, setJoinedRoom] = useState<string | null>(null);
   const roomInputRef = useRef<HTMLInputElement>(null);
   const messageInputRef = useRef<HTMLInputElement>(null);
-  const wsRef = useRef<WebSocket>();
+const wsRef = useRef<WebSocket | null>(null);
 
   useEffect(() => {
     const ws = new WebSocket(import.meta.env.VITE_WS_URL!);
