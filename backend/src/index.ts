@@ -45,4 +45,8 @@ wss.on("connection",(socket)=>{
 
 
      })
-})  
+}) 
+ 
+server.listen(PORT, () => {
+  console.log(`WebSocket server running on port ${PORT}`);
+});
